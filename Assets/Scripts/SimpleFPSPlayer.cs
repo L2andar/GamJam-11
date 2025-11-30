@@ -39,6 +39,7 @@ public class SimpleFPSPlayer : MonoBehaviour
         // store camera start local position for bobbing baseline
         if (cameraTransform != null) cameraStartLocalPos = cameraTransform.localPosition;
 
+<<<<<<< HEAD
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
@@ -60,6 +61,10 @@ public class SimpleFPSPlayer : MonoBehaviour
             rb.useGravity = false;
             rb.constraints = RigidbodyConstraints.FreezeRotation;
         }
+=======
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
+>>>>>>> 9e148df (coding ui)
     }
 
     void Update()
@@ -73,6 +78,7 @@ public class SimpleFPSPlayer : MonoBehaviour
     void HandleCursorUnlock()
     {
         // Press ESC to unlock and show cursor
+<<<<<<< HEAD
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Cursor.lockState = CursorLockMode.None;
@@ -90,13 +96,37 @@ public class SimpleFPSPlayer : MonoBehaviour
                 Cursor.visible = false;
             }
         }
+=======
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    Cursor.lockState = CursorLockMode.None;
+        //    Cursor.visible = true;
+        //    return;
+        //}
+
+        //// If cursor is visible and the player clicks the game window (left mouse)
+        //// re-lock and hide the cursor, but only if the click was NOT over UI.
+        //if (Cursor.visible && Input.GetMouseButtonDown(0))
+        //{
+        //    //if (eventSystem == null || !eventSystem.IsPointerOverGameObject())
+        //    //{
+        //    //    Cursor.lockState = CursorLockMode.Locked;
+        //    //    Cursor.visible = false;
+        //    //}
+        //}
+>>>>>>> 9e148df (coding ui)
     }
 
     void HandleLook()
     {
         // Respect UI interaction: when cursor visible and pointer over UI, do not rotate camera
+<<<<<<< HEAD
         if (Cursor.visible && eventSystem != null && eventSystem.IsPointerOverGameObject())
             return;
+=======
+        //if (Cursor.visible && eventSystem != null && eventSystem.IsPointerOverGameObject())
+        //    return;
+>>>>>>> 9e148df (coding ui)
 
         float mx = Input.GetAxis("Mouse X") * lookSensitivity;
         float my = Input.GetAxis("Mouse Y") * lookSensitivity;
