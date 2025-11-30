@@ -4,7 +4,12 @@
 TagManager:
   serializedVersion: 3
   tags:
+<<<<<<< HEAD
   - Door
+=======
+  - QuizUI
+  - UI
+>>>>>>> 38234101fbe300a90e88de5b9504b404a70b2cd0
   layers:
   - Default
   - TransparentFX
@@ -44,3 +49,13 @@ TagManager:
     locked: 0
   m_RenderingLayers:
   - Default
+<<<<<<< HEAD
+=======
+  - Light Layer 1
+  - Light Layer 2
+  - Light Layer 3
+  - Light Layer 4
+  - Light Layer 5
+  - Light Layer 6
+  - Light Layer 7
+>>>>>>> 38234101fbe300a90e88de5b9504b404a70b2cd0

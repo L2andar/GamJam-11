@@ -41,6 +41,25 @@ public class SimpleFPSPlayer : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        // Ensure a Rigidbody exists so trigger events reliably fire when using CharacterController.
+        // We make it kinematic so it won't interfere with CharacterController movement.
+        var rb = GetComponent<Rigidbody>();
+        if (rb == null)
+        {
+            rb = gameObject.AddComponent<Rigidbody>();
+            rb.isKinematic = true;
+            rb.useGravity = false;
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
+            Debug.Log("SimpleFPSPlayer: Added kinematic Rigidbody to ensure trigger events.");
+        }
+        else
+        {
+            // if a Rigidbody already exists, ensure it's configured to work with CharacterController
+            rb.isKinematic = true;
+            rb.useGravity = false;
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
+        }
     }
 
     void Update()
